@@ -1,0 +1,46 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Minecraft", Inter;
+}
+
+button {
+  font-family: inherit;
+}
+
+.world-surface { position: absolute; inset: 0; touch-action: none; }
+.world-error { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; color: white; padding: 32px; text-align: center; background: #131311; }
+.webgl-fallback { padding: 30vh 24px 0; text-align: center; color: white; }
+.modal::backdrop { background: #2929298a; }
+.modal-close-button { font-size: 32px; line-height: 1; min-width: 36px; min-height: 36px; }
+button:focus-visible, a:focus-visible { outline: 3px solid #ffff54; outline-offset: 4px; }
+.section-paragraph { line-height: 1.65; }
+.section-paragraph a { color: #ffff54; text-underline-offset: 3px; }
+.profile-banner, .project-banner { min-height: 220px; padding: 32px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; margin-bottom: 20px; text-align: center; background: #253c28; color: #fff; border: 4px solid #18291a; }
+.profile-banner h2, .project-banner h2 { font-size: 30px; }
+.profile-banner p, .project-banner p { line-height: 1.5; color: #d0dec6; }
+.project-two { background: #343046; border-color: #201d2d; }
+.project-three { background: #263844; border-color: #17232d; }
+.project-four { background: #423626; border-color: #2b2319; }
+.grass-block { display: block; width: 48px; height: 48px; background: linear-gradient(#7bac45 0 25%, #536f30 25% 38%, #85603d 38% 70%, #6b4c32 70%); box-shadow: inset -10px 0 #0003, 5px 5px #0004; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; }
+.skill-list span { padding: 9px 12px; background: #494949; color: #ffffa6; border: 2px solid #666; }
+.project-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.project-status { color: #d8d8bd; margin: 28px 0 16px; line-height: 1.6; }
+.loading-failure { color: white; text-align: center; }
+.loading-bar-container { max-width: calc(100vw - 48px); }
+.intro-message-container, .instructions-container { padding: 0 12px; text-align: center; line-height: 1.5; }
+@media (max-width: 480px) { .intro-message-container { font-size: 17px; } .instructions-container { font-size: 14px; } .profile-banner h2, .project-banner h2 { font-size: 25px; } .project-menu { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .background-top-half, .background-bottom-half { transition-duration: 0.01ms; transition-delay: 0s; } .modal { transition: none; } }
