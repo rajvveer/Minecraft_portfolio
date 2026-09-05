@@ -1,0 +1,42 @@
+﻿.expedition-entry { position: absolute; inset: 0; overflow: hidden; z-index: 999; color: #eff0dc; background: #18231d; opacity: 1; transition: opacity .9s ease, visibility .9s; }
+.entry-landscape { position: absolute; inset: -3%; background: url('/media/og/og-image.webp') center 54% / cover no-repeat; animation: landscape-arrive 18s ease-out both; }
+.entry-shade { position: absolute; inset: 0; background: linear-gradient(180deg, #101c205c 0%, #101d2150 20%, #0c1b2475 47%, #0e2015d9 100%), linear-gradient(90deg, #142a2040, transparent 60%); }
+.entry-grain { position: absolute; inset: 0; opacity: .1; background: repeating-linear-gradient(0deg, #fff1 0 1px, transparent 1px 4px); pointer-events: none; }
+.entry-brand { position: absolute; top: 37px; left: 44px; display: flex; align-items: center; gap: 15px; font-size: 17px; letter-spacing: 3px; }
+.entry-brand > span > span { display: block; font-size: 7px; margin-top: 10px; letter-spacing: 2.5px; color: #d6debe; }
+.entry-edition { position: absolute; top: 46px; right: 45px; display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: 2px; color: #e0e5c9; }
+.entry-center { position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%); width: min(1020px, calc(100% - 40px)); text-align: center; }
+.entry-eyebrow { font-size: 10px; letter-spacing: 4px; color: #dae0bd; margin-bottom: 28px; }
+.entry-title { position: relative; width: fit-content; margin: 0 auto; padding-bottom: 17px; }
+.entry-title h1 { font-size: clamp(55px, 8.7vw, 140px); letter-spacing: -5px; line-height: 1.15; color: #f0eed8; font-weight: normal; text-shadow: 0 2px #b7bea2, 0 4px #a7ae95, 0 6px #808e72, 0 8px #5f7258, 0 11px #2e4738, 0 15px #14291f, 0 20px 35px #0a1a1866; }
+.entry-title h1 > span { color: #b7dc76; }
+.entry-splash { position: absolute; right: -50px; bottom: -3px; color: #f4d679; font-size: clamp(12px, 1.4vw, 19px); text-shadow: 2px 3px #394527; transform: rotate(-9deg); animation: splash-breathe 3s ease-in-out infinite; }
+.entry-description { margin: 26px 0 28px; color: #e0e6d0; font-size: 15px; line-height: 1.9; text-shadow: 1px 2px #162a22; }
+.entry-actions { width: min(340px, 100%); margin: 0 auto; }
+.expedition-button { display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; min-height: 57px; color: #21361b; background: #b4d98a; box-shadow: inset 0 3px #e8f5be8c, inset 0 -4px #6c915044, 0 5px #1b3420, 0 7px #0d2018; border: 2px solid #d0e5a3; font-size: 17px; cursor: pointer; text-shadow: none; transition: transform .15s, background .15s; }
+.expedition-button:hover:enabled { background: #cdeb9f; transform: translateY(-2px); }
+.expedition-button:active:enabled { transform: translateY(3px); }
+.expedition-button:disabled { cursor: wait; color: #6e8060; background: #94aa7f; border-color: #b6c79b; }
+.entry-play { font-size: 13px; }
+.entry-button-arrow { margin-left: auto; margin-right: 17px; font-size: 20px; }
+.entry-play { margin-left: 22px; }
+.expedition-secondary { display: flex; align-items: center; justify-content: center; width: 100%; gap: 12px; height: 48px; margin-top: 14px; background: #172c209e; color: #e0e8cc; border: 1px solid #bccd9759; box-shadow: inset 0 1px #b9cba222; font-size: 12px; cursor: pointer; transition: background .2s; }
+.expedition-secondary:hover:enabled { background: #3a5033; }
+.expedition-secondary:disabled { color: #8f9e82; cursor: wait; }
+.expedition-secondary .item-icon { width: 18px; height: 18px; }
+.entry-loading { margin: 29px auto 0; width: 100%; }
+.entry-loading > div { height: 3px; background: #d2dfbd21; }
+.entry-loading > div > span { height: 100%; display: block; background: #bcd587; transition: width .4s ease; }
+.entry-loading > p { margin-top: 11px; display: flex; justify-content: space-between; font-size: 7px; letter-spacing: 1.6px; color: #b6c59f; }
+.entry-footer { position: absolute; left: 44px; right: 44px; bottom: 29px; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 8px; letter-spacing: 1.5px; color: #d5dfb6a1; }
+.entry-footer p { font-size: 7px; letter-spacing: 1px; line-height: 1.7; }
+.entry-footer p > span { margin: 0 12px; }
+.entry-footer kbd { color: #dce8bf; }
+.entry-revealed { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes landscape-arrive { from { transform: scale(1.08); } to { transform: scale(1); } }
+@keyframes splash-breathe { 50% { transform: rotate(-9deg) scale(1.04); } }
+@media (max-width: 760px) { .entry-brand { top: 26px; left: 24px; font-size: 14px; gap: 12px; } .entry-brand > span > span { font-size: 6px; letter-spacing: 1.8px; } .entry-edition { top: 38px; right: 24px; font-size: 7px; letter-spacing: 1px; } .entry-title h1 { letter-spacing: -3px; } .entry-eyebrow { font-size: 8px; letter-spacing: 2.2px; margin-bottom: 20px; } .entry-splash { right: -2px; bottom: -6px; font-size: 12px; } .entry-description { margin: 26px 0; font-size: 13px; } .entry-actions { width: 290px; } .entry-footer { left: 24px; right: 24px; bottom: 24px; justify-content: center; text-align: center; } .entry-footer > span { display: none; } .entry-footer p { max-width: 310px; font-size: 7px; } .entry-footer p > span { margin: 0 5px; } }
+@media (max-width: 390px) { .entry-edition { display: none; } .entry-title h1 { font-size: 49px; } .entry-eyebrow { letter-spacing: 1.7px; font-size: 7px; } .entry-center { top: 48%; } }
+@media (max-height: 650px) { .entry-center { top: 49%; } .entry-title h1 { font-size: clamp(49px, 6.4vw, 90px); } .entry-eyebrow { margin-bottom: 10px; font-size: 8px; } .entry-description { margin: 12px 0; font-size: 12px; } .entry-loading { margin-top: 19px; } .expedition-button { min-height: 47px; } .expedition-secondary { height: 40px; } }
+@media (max-height: 480px) and (orientation: landscape) { .entry-brand, .entry-edition, .entry-description, .entry-footer { display: none; } .entry-center { top: 48%; } .entry-loading { margin-top: 17px; } .entry-title { margin-bottom: 14px; } }
+@media (prefers-reduced-motion: reduce) { .entry-landscape, .entry-splash { animation: none; } .expedition-entry { transition-duration: .01ms; } }
