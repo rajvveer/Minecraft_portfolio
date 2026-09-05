@@ -1,2 +1,11 @@
-html, body { margin: 0; min-height: 100%; background: #131c16; color: #eeeedd; font-family: monospace; }
-main { padding: 48px; }
+﻿@font-face { font-family: Minecraft; src: url('/fonts/Minecraft-Regular.woff2') format('woff2'); font-display: swap; }
+html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #131310; }
+body, button, a { font-family: Minecraft, monospace; }
+.boot-screen { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; gap: 24px; text-align: center; padding: 24px; box-sizing: border-box; }
+.boot-screen p { margin: 0; font-size: 24px; }
+.boot-screen button { padding: 12px 30px; }
+.boot-screen { background: linear-gradient(#1325239c, #14251de8), url('/media/og/og-image.webp') center / cover; }
+.boot-screen .boot-eyebrow { font-size: 9px; letter-spacing: 3px; color: #cbd8b4; }
+.boot-screen h1 { font-size: clamp(48px, 8vw, 116px); line-height: 1.2; margin: 0; color: #f0eed8; letter-spacing: -3px; font-weight: normal; text-shadow: 0 3px #879477, 0 6px #3b533d, 0 10px #183022; }
+.boot-screen h1 > span { color: #b7dc76; }
+.boot-screen p { font-size: 13px; color: #cbd9b4; }
